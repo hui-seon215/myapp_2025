@@ -14,11 +14,7 @@ body {
   margin: 0px;
   height: 667px;
 }
-/* a blue color as a generic focus style */
-button:focus-visible {
-  
-  
-}
+
 a {
   text-decoration: none;
 }
