@@ -92,13 +92,13 @@ a {
 .map_meun{width: 400px; height: 40px; position: absolute; left: 0px; top: -5px;}
 
   
-   #map .map_search_box {
+   #my_map .map_search_box {
     width: 343px;
     height: 50px;
     top: 10px;
     left: 16px;
     border-radius: 25px;
-    border-color: ;
+    border-color: #ffffff;
     position: absolute;
     background-color: #ffffff;
     border: 2px solid #dddddd;
