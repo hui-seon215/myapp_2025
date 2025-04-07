@@ -10,17 +10,132 @@
     <script src="./js/jquery.mobile-1.4.5.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tai6tspebr&amp;submodules=geocoder"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/script_login.js"></script>
+	<script>
+  let startX, startY;
+  let scrollStartX, scrollStartY;
+  let isScrolling = false;
+  let moved = false; // 실제로 움직였는지 체크하는 플래그
+
+  // 시작 핸들러 (터치 및 마우스)
+  function handleStart(e) {
+    startX = (e.touches ? e.touches[0].clientX : e.clientX);
+    startY = (e.touches ? e.touches[0].clientY : e.clientY);
+    scrollStartX = window.scrollX;
+    scrollStartY = window.scrollY;
+    isScrolling = true;
+    moved = false; // 시작할 때 움직임 플래그 초기화
+  }
+
+  // 이동 핸들러 (터치 및 마우스)
+  function handleMove(e) {
+    if (!isScrolling) return;
+    const currentX = (e.touches ? e.touches[0].clientX : e.clientX);
+    const currentY = (e.touches ? e.touches[0].clientY : e.clientY);
+    if (Math.abs(startX - currentX) > 10 || Math.abs(startY - currentY) > 10) {
+      moved = true; // 일정 거리 이상 움직였다면 플래그 설정
+      const diffY = startY - currentY;
+      window.scrollTo(scrollStartX, scrollStartY + diffY);
+      e.preventDefault();
+    }
+  }
+
+  // 종료 핸들러 (터치 및 마우스)
+  function handleEnd(e) {
+    isScrolling = false;
+    if (moved) {
+      e.preventDefault(); // 움직임이 있었다면 클릭 등의 이벤트를 취소
+    }
+  }
+
+  // 휠 이벤트 핸들러
+  function handleWheel(e) {
+    window.scrollBy({
+      top: e.deltaY * 20,  // deltaY 값에 따라 스크롤 이동, 스크롤 속도 조절 가능
+      behavior: 'smooth'
+    });
+    e.preventDefault();
+  }
+
+  // 이벤트 리스너 등록
+  document.addEventListener('mousedown', handleStart, false);
+  document.addEventListener('mousemove', handleMove, false);
+  document.addEventListener('mouseup', handleEnd, false);
+  document.addEventListener('touchstart', handleStart, { passive: false });
+  document.addEventListener('touchmove', handleMove, { passive: false });
+  document.addEventListener('touchend', handleEnd, false);
+  document.addEventListener('wheel', handleWheel, { passive: false });
+</script>
+
+<style type="text/css">
+	.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{border:none;}
+	.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{background-color:#fff;}
+</style>
+
 </head>
-<body> 
+<body>
+<div class="login_wrap">
+      <div class="login_wrap_box">
+	  <div class="header_text">
+        <div class="fanpia-textlogo">
+            <img class="fanpia_login" src="img/icon/logo.png" />
+        </div>
+		<p class="wellcome">팬피아에 오신 것을 환영합니다!<br />로그인을 진행해주세요:)</p>
+	  </div>
+	  <div class="login_wrap_body">
+
+		<input type="text" class="id_box" placeholder="아이디를 입력해주세요" />
+		<input type="password" class="pass_box" placeholder="비밀번호를 입력해주세요" />
+
+		<a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#ticket_upload_page" data-ajax="false" data-transition="none"><div class="login_btn"><div class="login_btn_text">로그인</div></div></a>
+        
+		
+		<div class="sns_loging_box">
+			<div class="sns_login_box">
+				<div class="sns_line" > </div>
+				<div class="rectangle_text"></div>
+				<div class="sns_login_text">간편 로그인</div>
+			</div>
+
+
+			<a id="naver-login-btn"  href="javascript:kakaoLogin()">
+			<div class="naver"><img class="naver-logo" src="img/icon/naver.png" /></div></a>
+			<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+			<script>Kakao.init('45edffd2681daa9c5522b083fb28ec7d');</script>
+			<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous">
+			</script>
+			
+			
+			<a id="kakao-login-btn"  href="javascript:kakaoLogin()">
+			<div class="kakao" ><img class="kakao-logo" src="img/icon/kakao.png" /></div></a>
+			<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+			<script>Kakao.init('45edffd2681daa9c5522b083fb28ec7d');</script>
+			<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous">
+			</script>
+			
+			
+			
+			<a id="google-login-btn"  href="javascript:kakaoLogin()">
+			<div class="google"><img class="google-logo" src="img/icon/google.png" /></div></a>
+			<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+			<script>Kakao.init('45edffd2681daa9c5522b083fb28ec7d');</script>
+			<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous">
+			</script>
+		</div>
+        <div class="login_find">아이디 찾기/비밀번호 찾기</div>
+	   </div>
+      </div>
+    </div>
+
+
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous">
     </script>
         <script>
             Kakao.init('45edffd2681daa9c5522b083fb28ec7d'); // 사용하려는 앱의 JavaScript 키 입력
         </script>
 
-        <a id="kakao-login-btn"  href="javascript:kakaoLogin()">
-            <img src="images/kakao.png" width="222" alt="카카오 로그인 버튼">
-        </a>
+ 
 
         <script>
             function kakaoLogin(){
