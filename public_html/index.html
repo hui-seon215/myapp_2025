@@ -41,7 +41,7 @@
 <div data-role="page" id="my_map" >
     <!-- "header" 메인 헤더(상단 바)-->
 	<div  data-role="header" data-position="fixed" style="background-color:none; height:70px;"> 
-		<a href="#"  style="background:none; box-shadow:none;"><img src="img/icon/arrow_b.png" /></a>
+		<a href="" data-role="back" style="background:none; box-shadow:none;"><img src="img/icon/arrow_b.png" /></a>
 		<h1>지도</h1>
         <a href="#" style="background:none; box-shadow:none;margin-right:50px;" class="ui-btn-right"><img src="img/icon/alert.png" alt="alert"/></a>
 			<a href="#" style="background:none; box-shadow:none;" class="ui-btn-right"><img src="img/icon/ticket.png" alt="ticket"/></a>
@@ -154,9 +154,8 @@
                                     let contentString = `
                                         <div class="iw_inner" style="padding: 0px 15px;">
                                             <h3>${dutyName}</h3> 
-                                            <button onclick="window.open('https://map.kakao.com/link/to/${dutyName},${lat},${lon}');">카카오맵 연동</           button><br />
-                                            
-                                            <p>운영 시간 : ${dutyTime1s}~${dutyTime1c}</p> <>
+                                            <button onclick="window.open('https://map.kakao.com/link/to/${dutyName},${lat},${lon}');">카카오맵 연동</button><br />
+                                            <p>운영 시간 : ${dutyTime1s}~${dutyTime1c}</p> 
                                             <p>운영 장소 : ${dutyAddr} </p>
                                             <p>혼잡도 : ${dutyFax}</p>
                                         </div>
