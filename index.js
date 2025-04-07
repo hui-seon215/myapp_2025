@@ -41,7 +41,7 @@ app.get("/pharmach_list", (req, res) => {
             });
         }
         catch(e) {
-            console.lgo(e);
+            console.log(e);
         }
         return response;
     }
@@ -54,7 +54,7 @@ app.get("/pharmach_list", (req, res) => {
 });
 
 
-
-    // https://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=TR9SiJfLDu9G7hDWYb%2FQdZ8UWDNr8a02u59fN62ODfgy8TYZJl1ZVGvZ0W2znOOx7AD4K1ElX%2FPZA04mk3u8RA%3D%3D&Q0=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C&Q1=%EA%B0%95%EB%82%A8%EA%B5%AC&QT=1&QN=%EC%82%BC%EC%84%B1%EC%95%BD%EA%B5%AD&ORD=NAME&pageNo=1&numOfRows=10
-
-    
+// index02.html에 접근 가능하도록 라우팅 추가
+app.get("/index02", (req, res) => {
+    res.sendFile(__dirname + "/public_html/index02.html");
+});
