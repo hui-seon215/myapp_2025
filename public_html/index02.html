@@ -68,6 +68,18 @@
   </style>
 </head>
 <body>
+<!-- ✅ 중복 제거 후 Kakao SDK 단일 삽입 및 설정 -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('45edffd2681daa9c5522b083fb28ec7d');
+  function kakaoLogin() {
+    Kakao.Auth.authorize({
+      redirectUri: 'https://fampia-c9647b5e8f6c.herokuapp.com',
+      scope: 'profile_nickname',
+      prompt: 'login'
+    });
+  }
+</script>
   <div class="login_wrap">
     <div class="login_wrap_box">
       <div class="header_text">
@@ -107,17 +119,6 @@
     </div>
   </div>
 
-  <!-- ✅ 중복 제거 후 Kakao SDK 단일 삽입 및 설정 -->
-  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
-<script>
-  Kakao.init('45edffd2681daa9c5522b083fb28ec7d');
-  function kakaoLogin() {
-    Kakao.Auth.authorize({
-      redirectUri: 'https://fampia-c9647b5e8f6c.herokuapp.com',
-      scope: 'profile_nickname',
-      prompt: 'login'
-    });
-  }
-</script>
+
 </body>
 </html>
