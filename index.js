@@ -5,10 +5,14 @@ let axios = require("axios");
 let app = express();
 let port = process.env.PORT || 80;
 
-app.use(express.static("public_html"));
-    app.listen(port, function(){
-        console.log("html 서버 시작됨")
-    });
+//app.use(express.static("public_html"));
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+app.listen(port, function(){
+	console.log("html 서버 시작됨")
+});
 
 
 // app.use()로 public_html 폴더 전체를 express 모듈 웹서버가 구동되게 했는데, 단 한 개의 페이지만 열어보자
