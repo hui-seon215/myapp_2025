@@ -13,6 +13,7 @@
     <!-- <script src="./js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./css/style_map.css" />
 	<link rel="stylesheet" href="./css/ui_delete.css" />
+	<script src="./js/tab.js"></script>
    
 </head>
 
@@ -21,11 +22,12 @@
 <body>
 <div data-role="page" id="my_map" >
     <!-- "header" 메인 헤더(상단 바)-->
-	<div  data-role="header" data-position="fixed" style="background-color:none; height:70px;"> 
-		<a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#main_page" data-ajax="false"  style="background:none; box-shadow:none;"><img src="img/icon/arrow_b.png" /></a>
+	<div  data-role="header" data-position="fixed" style="background-color:none; height:55px;"> 
+		<a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#main_page" data-ajax="false"  style="background:none; box-shadow:none;"><img src="img/icon/arrow_b.png"   style="margin-top: 8px;"/></a>
 		<h1>지도</h1>
-        <a href="#" style="background:none; box-shadow:none;margin-right:50px;" class="ui-btn-right"><img src="img/icon/alert.png" alt="alert"/></a>
-			<a href="#" style="background:none; box-shadow:none;" class="ui-btn-right"><img src="img/icon/ticket.png" alt="ticket"/></a>
+        <a href="#" style="background:none; box-shadow:none;margin-right:50px; margin-top: 5px;" class="ui-btn-right"><img src="img/icon/alert.png" alt="alert"/></a>
+			<a href="#" style="background:none; box-shadow:none;" class="ui-btn-right"><img src="img/icon/ticket.png" style="
+    margin-top: 5px; alt="ticket"  /></a>
         <div class="fiexd">
             <div class="map_search_box"></div>
             <input type="text" class="map_search" placeholder="검색어를 입력해주세요" />
@@ -197,13 +199,13 @@
     </div><!-- "content"(중간)끝-->
 
    
-    <div  data-role="footer"  data-position="fixed" style="height: 59px; border-radius: 20px 20px 0px 0px;overflow: hidden; box-shadow:0px -4px 20px rgba(0,0,0,0.1); "> <!-- "footer" 메인 푸터(하단 바)-->
+    <div  data-role="footer"  data-position="fixed" style="height: 55px; border-radius: 20px 20px 0px 0px;overflow: hidden; box-shadow:0px -4px 20px rgba(0,0,0,0.1); "> <!-- "footer" 메인 푸터(하단 바)-->
         <div data-role="navbar" >
             <ul>
-                <li><a href="#page1" ><img src="img/icon/home.png" /></a> </li>
-                <li><a href="#page2" ><img src="img/icon/location_on.png" /></a> </li>
-                <li><a href="#page3" ><img src="img/icon/speech_bubble.png" /></a> </li>
-                <li><a href="#page4" ><img src="img/icon/my.png" /></a> </li>
+                <li><a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#main_page" data-ajax="false" ><img src="img/icon/home.png" /></a> </li>
+                <li><a href="#" ><img src="img/icon/location_on.png" /></a> </li>
+                <li><a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#fna_zone" data-ajax="false" ><img src="img/icon/speech_bubble.png" /></a> </li>
+                <li><a href="http://wjatnsdl1215.dothome.co.kr/project05/index.html#my_page" data-ajax="false" ><img src="img/icon/my.png" /></a> </li>
             </ul>
         </div>
     </div><!-- "footer" 메인 푸터(하단 바)end-->
