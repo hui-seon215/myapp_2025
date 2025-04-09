@@ -122,4 +122,6 @@ select{background-color: none;}
 
 .ui-header .ui-title, .ui-footer .ui-title{padding: 1em 0;}
 
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{text-shadow:none;}
+
 
