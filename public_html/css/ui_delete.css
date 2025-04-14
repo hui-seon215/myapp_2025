@@ -1,4 +1,4 @@
-/* ¹öÆ° ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ */
 .ui-page-theme-a .ui-btn,
 html .ui-bar-a .ui-btn,
 html .ui-body-a .ui-btn,
@@ -27,7 +27,7 @@ html head+body .ui-btn.ui-btn-a:hover {
     border: none;
 }
 
-/* ¹Ù ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .ui-bar-a,
 .ui-page-theme-a .ui-bar-inherit,
 html .ui-bar-a .ui-bar-inherit,
@@ -38,16 +38,16 @@ html body .ui-group-theme-a .ui-bar-inherit {
     font-weight: 300;
 }
 
-/* ÄÁÅÙÃ÷ ¿µ¿ª ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .ui-content {
     padding: 0;
     overflow-y: hidden;
 }
 
-/* Çì´õ & ÇªÅÍ ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ & Çªï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 .ui-header .ui-title,
 .ui-footer .ui-title {
-   
+    margin: 0.90em auto;
 }
 
 .ui-btn-left,
@@ -60,14 +60,14 @@ html body .ui-group-theme-a .ui-bar-inherit {
     margin-top: 0;
 }
 
-/* ÆäÀÌÁö ÆÐµù Á¶Á¤ */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ðµï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .ui-page .ui-page-theme-a .ui-page-header-fixed .ui-page-footer-fixed .ui-page-active {
     padding: 70px 0 58px;
 }
 
 select{background-color: none;}
 
-/* ¼±ÅÃ ¹Ú½º ½ºÅ¸ÀÏ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ */
 #language-box .ui-select {
     border: 1px solid #dddddd;
     border-radius: 50px;
@@ -97,7 +97,7 @@ select{background-color: none;}
     left: 15px;
 }
 
-/* ±âÅ¸ */
+/* ï¿½ï¿½Å¸ */
 .ui-page-theme-a .ui-body-inherit {
     border: none;
 }
@@ -116,12 +116,10 @@ select{background-color: none;}
 
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{text-shadow:none;}
 
-.ui-btn-left, .ui-btn-right{top:0px;}
+.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on::after, html .ui-bar-a .ui-checkbox-on::after, html .ui-body-a .ui-checkbox-on::after, html body .ui-group-theme-a .ui-checkbox-on::after, .ui-btn.ui-checkbox-on.ui-btn-a::after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active{background-color: none; border-color: none; text-shadow:none;}
 
-.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{    text-shadow:none;}
+.ui-page-theme-a .ui-btn:hover{background-color: none; color: none; text-shadow:none;}
 
-.ui-header .ui-title, .ui-footer .ui-title{padding: 1em 0;}
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head + body .ui-btn.ui-btn-a:hover{background: none;}
 
-.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{text-shadow:none;}
-
-
+.ui-page-theme-a .ui-btn:focus{box-shadow: none;}
